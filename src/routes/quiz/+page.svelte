@@ -1,6 +1,6 @@
 <script>
   import { birds } from '$lib/data/birds.js';
-  import { shuffle } from '$lib/utils.js';
+  import { asset, shuffle } from '$lib/utils.js';
 
   let questions = $state(generateQuestions());
   let currentIndex = $state(0);
@@ -60,7 +60,7 @@
       {#if current}
         {#if current.type === 'name-to-trait'}
           <div class="quiz-image">
-            <img src={current.bird.image} alt="{current.bird.name}" />
+            <img src={asset(current.bird.image)} alt="{current.bird.name}" />
           </div>
           <h2>Which bird is this?</h2>
         {:else}

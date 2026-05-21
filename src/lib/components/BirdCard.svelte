@@ -1,11 +1,12 @@
 <script>
   import { base } from '$app/paths';
+  import { asset } from '$lib/utils.js';
   let { bird, showLink = true } = $props();
 </script>
 
 <div class="card bird-card">
   <div class="card-image">
-    <img src={bird.image} alt="{bird.name}" />
+    <img src={asset(bird.image)} alt="{bird.name}" />
   </div>
   <div class="card-body">
     <h3>{bird.name}</h3>

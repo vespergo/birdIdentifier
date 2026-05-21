@@ -1,5 +1,6 @@
 <script>
   import { birds } from '$lib/data/birds.js';
+  import { asset } from '$lib/utils.js';
 
   let { bird1, bird2 } = $props();
 
@@ -23,13 +24,13 @@
           <th>Trait</th>
           <th class="bird-col">
             <div class="compare-bird-header">
-              <img src={bird1.image} alt="{bird1.name}" class="compare-silhouette" />
+              <img src={asset(bird1.image)} alt="{bird1.name}" class="compare-silhouette" />
               <strong>{bird1.name}</strong>
             </div>
           </th>
           <th class="bird-col">
             <div class="compare-bird-header">
-              <img src={bird2.image} alt="{bird2.name}" class="compare-silhouette" />
+              <img src={asset(bird2.image)} alt="{bird2.name}" class="compare-silhouette" />
               <strong>{bird2.name}</strong>
             </div>
           </th>

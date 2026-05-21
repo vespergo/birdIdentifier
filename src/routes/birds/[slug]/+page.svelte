@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import { asset } from '$lib/utils.js';
   import { getBird } from '$lib/data/birds.js';
 
   let { data } = $props();
@@ -14,7 +15,7 @@
 
   <div class="bird-detail">
     <div class="detail-image">
-      <img src={bird.image} alt={bird.name} />
+      <img src={asset(bird.image)} alt={bird.name} />
     </div>
 
     <div class="detail-info">
@@ -52,7 +53,7 @@
           <tr><td>Season</td><td>{bird.season}</td></tr>
           <tr><td>Song</td><td><em>{bird.song}</em></td></tr>
           {#if bird.sound}
-            <tr><td>Audio</td><td><audio controls preload="none"><source src={bird.sound} type="audio/mpeg" /></audio></td></tr>
+            <tr><td>Audio</td><td><audio controls preload="none"><source src={asset(bird.sound)} type="audio/mpeg" /></audio></td></tr>
           {/if}
         </tbody>
       </table>
@@ -69,7 +70,7 @@
         {#each similar as s}
           <div class="similar-item">
             <a href="{base}/birds/{s.id}" class="similar-link">
-              <img src={s.species.image} alt={s.species.name} class="similar-img" />
+              <img src={asset(s.species.image)} alt={s.species.name} class="similar-img" />
               <div>
                 <strong>{s.species.name}</strong>
                 <p>{s.note}</p>

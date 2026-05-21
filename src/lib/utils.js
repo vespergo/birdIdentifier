@@ -1,3 +1,9 @@
+import { base } from '$app/paths';
+
+export function asset(path) {
+  return `${base}${path}`;
+}
+
 export function shuffle(array) {
   const a = [...array];
   for (let i = a.length - 1; i > 0; i--) {

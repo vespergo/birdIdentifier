@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import { asset } from '$lib/utils.js';
   import { birds } from '$lib/data/birds.js';
 
   let step = $state(0);
@@ -113,7 +114,7 @@
         <div class="results-grid">
           {#each results as bird}
             <a href="{base}/birds/{bird.id}" class="result-card card">
-              <img src={bird.image} alt="{bird.name}" class="result-img" />
+              <img src={asset(bird.image)} alt="{bird.name}" class="result-img" />
               <div>
                 <strong>{bird.name}</strong>
                 <p class="result-detail">{bird.size} &middot; {bird.primaryColor}</p>
