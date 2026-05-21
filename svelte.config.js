@@ -11,7 +11,13 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
-		paths: { base }
+		paths: { base },
+		prerender: {
+			handleHttpError: ({ path }) => {
+				if (path === '/' || !path.startsWith(base)) return;
+				throw new Error(`Failed to prerender ${path}`);
+			}
+		}
 	}
 };
 
