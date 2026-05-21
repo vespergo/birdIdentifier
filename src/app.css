@@ -1,0 +1,74 @@
+:root {
+  --green: #2d6a4f;
+  --green-dark: #1b4332;
+  --green-light: #95d5b2;
+  --green-bg: #e9f5f0;
+  --gray-50: #f8f9fa;
+  --gray-100: #e9ecef;
+  --gray-200: #dee2e6;
+  --gray-300: #ced4da;
+  --gray-400: #adb5bd;
+  --gray-500: #6c757d;
+  --gray-600: #495057;
+  --gray-700: #343a40;
+  --gray-800: #212529;
+  --red: #d62828;
+  --orange: #e07a1b;
+  --yellow: #d4a017;
+  --blue: #1e6fa0;
+  --brown: #7f5539;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-family: var(--font); color: var(--gray-800); background: #fff; line-height: 1.6; }
+
+body { min-height: 100vh; }
+
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.2; color: var(--gray-800); }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.125rem; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.5rem 1.125rem; border-radius: var(--radius);
+  font-size: 0.9rem; font-weight: 500; cursor: pointer;
+  border: 1px solid var(--gray-300); background: #fff;
+  color: var(--gray-700); transition: all 0.15s;
+}
+.btn:hover { border-color: var(--green); color: var(--green); }
+.btn-primary { background: var(--green); color: #fff; border-color: var(--green); }
+.btn-primary:hover { background: var(--green-dark); border-color: var(--green-dark); color: #fff; }
+.btn-sm { padding: 0.3rem 0.75rem; font-size: 0.8rem; }
+
+.tag {
+  display: inline-block; padding: 0.15rem 0.55rem;
+  border-radius: 999px; font-size: 0.75rem; font-weight: 500;
+  background: var(--gray-100); color: var(--gray-600);
+}
+
+input, select {
+  padding: 0.4rem 0.65rem; border: 1px solid var(--gray-300);
+  border-radius: var(--radius); font-size: 0.875rem;
+  font-family: inherit; background: #fff; color: var(--gray-800);
+}
+
+.card {
+  background: #fff; border-radius: var(--radius); border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow); overflow: hidden;
+}
+
+.grid { display: grid; gap: 1.25rem; }
+.grid-2 { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
