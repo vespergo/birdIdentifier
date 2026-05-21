@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import { birds } from '$lib/data/birds.js';
 
   let step = $state(0);
@@ -111,7 +112,7 @@
       {:else}
         <div class="results-grid">
           {#each results as bird}
-            <a href="/birds/{bird.id}" class="result-card card">
+            <a href="{base}/birds/{bird.id}" class="result-card card">
               <img src={bird.image} alt="{bird.name}" class="result-img" />
               <div>
                 <strong>{bird.name}</strong>

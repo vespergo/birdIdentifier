@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import { getBird } from '$lib/data/birds.js';
 
   let { data } = $props();
@@ -9,7 +10,7 @@
 </script>
 
 <div class="container">
-  <a href="/birds" class="back-link">&larr; All Birds</a>
+  <a href="{base}/birds" class="back-link">&larr; All Birds</a>
 
   <div class="bird-detail">
     <div class="detail-image">
@@ -67,7 +68,7 @@
         <h3>Similar Species</h3>
         {#each similar as s}
           <div class="similar-item">
-            <a href="/birds/{s.id}" class="similar-link">
+            <a href="{base}/birds/{s.id}" class="similar-link">
               <img src={s.species.image} alt={s.species.name} class="similar-img" />
               <div>
                 <strong>{s.species.name}</strong>
@@ -82,7 +83,7 @@
     <div class="card detail-card">
       <h3>Compare</h3>
       <p>Compare this bird side-by-side with another species.</p>
-      <a href="/compare?a={bird.id}" class="btn btn-sm">Compare Now</a>
+      <a href="{base}/compare?a={bird.id}" class="btn btn-sm">Compare Now</a>
     </div>
   </div>
 </div>

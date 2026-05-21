@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   let { bird, showLink = true } = $props();
 </script>
 
@@ -20,7 +21,7 @@
       {/each}
     </div>
     {#if showLink}
-      <a href="/birds/{bird.id}" class="btn btn-sm" style="margin-top:0.75rem">View Details</a>
+      <a href="{base}/birds/{bird.id}" class="btn btn-sm" style="margin-top:0.75rem">View Details</a>
     {/if}
   </div>
 </div>

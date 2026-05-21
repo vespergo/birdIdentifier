@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import { birds } from '$lib/data/birds.js';
   import BirdCard from '$lib/components/BirdCard.svelte';
 
@@ -10,8 +11,8 @@
     <h1>Western North Carolina<br />Birds</h1>
     <p class="hero-sub">Identify the birds of the Southern Blue Ridge &mdash; from chickadees to hawks, warblers to woodpeckers.</p>
     <div class="hero-links">
-      <a href="/birds" class="btn btn-primary">Browse All Birds</a>
-      <a href="/id-key" class="btn">Identification Key</a>
+      <a href="{base}/birds" class="btn btn-primary">Browse All Birds</a>
+      <a href="{base}/id-key" class="btn">Identification Key</a>
     </div>
   </div>
 </section>
@@ -19,7 +20,7 @@
 <section class="container">
   <div class="section-header">
     <h2>Featured Birds</h2>
-    <a href="/birds" class="btn btn-sm">View All &rarr;</a>
+    <a href="{base}/birds" class="btn btn-sm">View All &rarr;</a>
   </div>
   <div class="grid grid-3">
     {#each featured as bird}
@@ -33,15 +34,15 @@
     <h2>Explore</h2>
   </div>
   <div class="grid grid-3">
-    <a href="/compare" class="explore-card card">
+    <a href="{base}/compare" class="explore-card card">
       <strong>Compare Birds</strong>
       <p>Side-by-side comparison of any two species to spot key differences.</p>
     </a>
-    <a href="/id-key" class="explore-card card">
+    <a href="{base}/id-key" class="explore-card card">
       <strong>Identification Key</strong>
       <p>Step-by-step guide to narrow down a bird by size, color, and habitat.</p>
     </a>
-    <a href="/quiz" class="explore-card card">
+    <a href="{base}/quiz" class="explore-card card">
       <strong>Bird Quiz</strong>
       <p>Test your knowledge with a bird identification quiz.</p>
     </a>

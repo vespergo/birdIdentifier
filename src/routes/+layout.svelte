@@ -1,16 +1,17 @@
 <script>
+  import { base } from '$app/paths';
   import '../app.css';
   let { children } = $props();
 </script>
 
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="/" class="logo">Bird Identifier</a>
+    <a href="{base}/" class="logo">Bird Identifier</a>
     <div class="nav-links">
-      <a href="/birds">All Birds</a>
-      <a href="/compare">Compare</a>
-      <a href="/id-key">ID Key</a>
-      <a href="/quiz">Quiz</a>
+      <a href="{base}/birds">All Birds</a>
+      <a href="{base}/compare">Compare</a>
+      <a href="{base}/id-key">ID Key</a>
+      <a href="{base}/quiz">Quiz</a>
     </div>
   </div>
 </nav>
